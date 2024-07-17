@@ -30,17 +30,30 @@
 // let output = [counter(), counter(), counter()];
 // console.log(output); // Output: [10, 11, 12]
 
-console.log(Date.now());
-const minute = 1000 * 60;
-const hour = minute * 60;
-const day = hour * 24;
-const year = day * 365;
-console.log(Math.round(Date.now()));
+// console.log(Date.now());
+// const minute = 1000 * 60;
+// const hour = minute * 60;
+// const day = hour * 24;
+// const year = day * 365;
+// console.log(Math.round(Date.now()));
 
-function sleep(millis) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(millis);
-    }, millis);
-  });
-}
+// function sleep(millis) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(millis);
+//     }, millis);
+//   });
+// }
+
+const arr = [];
+console.log(arr.length);
+
+Array.prototype.last = function () {
+  if (this.length === 0) {
+    const num = -1;
+    return num;
+  } else {
+    const endNum = this.pop();
+    return endNum;
+  }
+};
